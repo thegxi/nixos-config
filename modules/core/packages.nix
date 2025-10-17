@@ -1,4 +1,4 @@
-{pkgs, pkgs-unstable, lib, zen-browser, ...}: {
+{pkgs, pkgs-unstable, lib, ...}: {
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
