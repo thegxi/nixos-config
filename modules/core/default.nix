@@ -1,10 +1,11 @@
 { inputs, ... }:
 {
   imports = [
+    ./packages.nix
+    ./sddm.nix
+    ./stylix.nix
     ./user.nix
     ./xserver.nix
-    ./sddm.nix
-    ./packages.nix
     inputs.stylix.nixosModules.stylix
   ];
 }
