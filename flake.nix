@@ -29,7 +29,10 @@
           config.allowUnfree = true;
         };
       };
-      modules = [./gpus/${gpu}];
+      modules = [
+        ./gpus/${gpu}
+        ./hosts/xi-nix
+      ];
     };
   in {
     nixosConfigurations = {

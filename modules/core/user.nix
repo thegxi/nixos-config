@@ -4,7 +4,7 @@
   inputs,
   username,
   host,
-  profile,
+  gpu,
   ...
 }: 
 #let

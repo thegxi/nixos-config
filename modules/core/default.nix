@@ -1,5 +1,7 @@
 { inputs, ... }:
 {
-  ./user.nix
-  inputs.stylix.nixosModules.stylix
+  imports = [
+    ./user.nix
+    inputs.stylix.nixosModules.stylix
+  ];
 }
