@@ -70,7 +70,6 @@
     nwg-displays # Manage Displays
     nwg-drawer # drawer GUI
     nwg-look # Look GUI
-    rofi-emoji-wayland
     vivaldi # Browser
     # Unstable Packages
     #pkgs-unstable.code-cursor # AI IDE
