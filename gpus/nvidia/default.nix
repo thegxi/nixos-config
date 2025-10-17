@@ -1,7 +1,9 @@
 { host, ... }: {
   imports = [
+    ../../hosts/${host}
     ./nvidia-drivers.nix    
     ../../modules/core
+    ../../modules/system
   ];
   # Enable GPU Drivers
   #drivers.amdgpu.enable = false;

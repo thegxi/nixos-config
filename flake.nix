@@ -31,7 +31,6 @@
       };
       modules = [
         ./gpus/${gpu}
-        ./hosts/xi-nix
       ];
     };
   in {
