@@ -9,13 +9,11 @@
   imports = [
     ./animations.nix
     ./autostart.nix
-    ./override-config.nix
-    ./tofi.nix
   ];
 
   programs.niri = {
     enable = true;
-    package = pkgs.niri-unstable;
+    package = pkgs.niri;
     settings =
       with config.lib.stylix.colors.withHashtag;
       let
@@ -201,4 +199,14 @@
         };
       };
   };
+  home.file.".config/niri/config-override.kdl".text = ''
+    layout {
+      blur {
+        on
+        passer 2
+        radiu 5
+        noise 0.1
+      }
+    }
+  '';
 }

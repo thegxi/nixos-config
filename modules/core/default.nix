@@ -1,6 +1,7 @@
 { inputs, ... }:
 {
   imports = [
+    ./network
     ./packages.nix
     ./sddm.nix
     ./system.nix
