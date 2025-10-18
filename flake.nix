@@ -34,9 +34,6 @@
       modules = [
         ./gpus/${gpu}
       ];
-      nixpkgs.config = {
-        allowUnfree = true;
-      };
     };
   in {
     nixosConfigurations = {
