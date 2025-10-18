@@ -85,7 +85,7 @@
     vesktop # Discord Alternative
     android-studio # Android Studio
     chromium # Browser
-    google-chrome # Browser
+    #google-chrome # Browser
     # Dev Packages
     androidenv.androidPkgs.platform-tools  # This includes adb
     androidenv.androidPkgs.emulator        # For Android emulator
