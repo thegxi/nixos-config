@@ -8,7 +8,6 @@
     };
     nixpkgs = {
       url = "github:nixos/nixpkgs?ref=nixos-unstable";
-      config.allowUnfree = true;
     };
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix = {
