@@ -7,6 +7,5 @@ in {
     ./terminal
     waybarChoice
     ./shell
-    ./tofi
   ];
 }

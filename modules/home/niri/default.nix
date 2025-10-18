@@ -9,6 +9,7 @@
   imports = [
     ./animations.nix
     ./autostart.nix
+    ./tofi
   ];
 
   programs.niri = {
