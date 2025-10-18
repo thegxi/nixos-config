@@ -8,6 +8,7 @@
     };
     nixpkgs = {
       url = "github:nixos/nixpkgs?ref=nixos-unstable";
+      config.allowUnfree = true;
     };
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix = {
@@ -18,11 +19,6 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... } @ inputs: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      config = {
-        allowUnfree = true;
-      };
-    };
     # Helper function to create a host configuration
     mkHost = { hostname, gpu, username }: nixpkgs.lib.nixosSystem {
       inherit system;
