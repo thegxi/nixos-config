@@ -1,9 +1,9 @@
 { inputs, host, ... }: let
-  inherit (import ../../hosts/${host}/variables.nix) waybar-choice
+  inherit (import ../../hosts/${host}/variables.nix) waybarChoice
 in {
   imports = [
     ./niri.nix
     ./terminal
-    waybar-choice
+    waybarChoice
   ];
 }
