@@ -23,6 +23,7 @@
         homeDirectory = "/home/${username}";
         stateVersion = "25.05";
       };
+      imports = [ ./../home ];
     };
   };
   users.mutableUsers = true;
