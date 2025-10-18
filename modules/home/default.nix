@@ -5,5 +5,6 @@ in {
     ./niri.nix
     ./terminal
     waybarChoice
+    ./zsh
   ];
 }
