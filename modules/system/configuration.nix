@@ -44,7 +44,7 @@
   # services.xserver.enable = true;
 
 
-  
+  nixpkgs.config.allowUnfree = true; 
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
