@@ -3,6 +3,7 @@
   imports = [
     ./packages.nix
     ./sddm.nix
+    ./system.nix
     ./stylix.nix
     ./user.nix
     ./xserver.nix
