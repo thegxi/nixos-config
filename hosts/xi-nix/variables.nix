@@ -68,7 +68,7 @@
   stylixImage = ../../wallpapers/55.png;
 
   # Waybar Choice
-  #waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin.nix;
+  waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin.nix;
 
   # Animation Choice
   #animChoice = ../../modules/home/hyprland/animations-end4.nix;
