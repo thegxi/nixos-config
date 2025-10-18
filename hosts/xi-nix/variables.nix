@@ -68,7 +68,7 @@
   stylixImage = ../../wallpapers/55.png;
 
   # Waybar Choice
-  waybarChoice = ../../modules/home/waybar/waybar.nix;
+  waybarChoice = ../../modules/home/niri/waybar/waybar.nix;
 
   # Animation Choice
   #animChoice = ../../modules/home/hyprland/animations-end4.nix;

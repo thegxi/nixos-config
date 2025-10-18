@@ -2,9 +2,13 @@
   inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
 in {
   imports = [
-    ./niri.nix
+    ./lazygit.nix
+    ./network
+    ./niri
+    ./packages.nix
     ./terminal
+    ./tofi.nix
     waybarChoice
-    ./zsh
+    ./shell
   ];
 }
