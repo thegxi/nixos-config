@@ -56,8 +56,8 @@
   thunarEnable = true; # Enable Thunar File Manager
   controllerSupportEnable = true; # Enable Controller Support For Gaming
   flutterdevEnable = true; # Enable Flutter Development Environment
-  stylixEnable = true; # Enable Stylix System Theming
-  syncthingEnable = true; # Enable Syncthing File Synchronization
+  stylix-enable = true; # Enable Stylix System Theming
+  syncthing-enable = true; # Enable Syncthing File Synchronization
   enableDankMaterialShell = true; # Enable Dank Material Shell (disables waybar automatically)
 
   # Display Manager Options (choose one - add to host's default.nix)
@@ -65,10 +65,10 @@
   # services.displayManager.ly.enable = true; # ly with matrix animation
 
   # Styling
-  stylixImage = ../../wallpapers/55.png;
+  stylix-image = ../../wallpapers/55.png;
 
   # Waybar Choice
-  waybarChoice = ../../modules/home/waybar/waybar-jak-catppuccin.nix;
+  waybar-choice = ../../modules/home/waybar/waybar-jak-catppuccin.nix;
 
   # Animation Choice
   #animChoice = ../../modules/home/hyprland/animations-end4.nix;
