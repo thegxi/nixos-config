@@ -8,13 +8,11 @@
     ./modules
   ];
 
-  nix.settings.trusted-users = ["root" "youth"];
+  nix.settings.trusted-users = ["root" "xi"];
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
-    wineWow64Packages.stable
-    winetricks
     google-chrome
     pulseaudio
     pciutils # lspci
@@ -22,7 +20,7 @@
     libva
     libva-utils
     power-profiles-daemon
-    vim
+    neovim
     git
     curl
     wget
@@ -44,20 +42,20 @@
 
   # NOTE: 敏感环境变量加载 (ai_api_key等)
   age.identityPaths = [
-    "/home/youth/.ssh/id_ed25519"
+    "/home/xi/.ssh/id_ed25519"
   ];
-  age.secrets."ai_api_key" = {
-    file = ./secrets/ai_api_key.age;
-    owner = "youth";
-  };
+  # age.secrets."ai_api_key" = {
+  #   file = ./secrets/ai_api_key.age;
+  #   owner = "xi";
+  # };
 
-  users.users.youth = {
-    description = "Youth";
+  users.users.xi = {
+    description = "Xi";
     isNormalUser = true;
-    home = "/home/youth";
+    home = "/home/xi";
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;
-    hashedPassword = "$6$d89dDb.7HKl8dx2J$NP00uF4ukMaVYoWzInQxoeokT7927qybXJGzrGwe7WYd7aRNMrNVfLbgnotRDPysU0lqTrZ1L0uTu7EjXsYwg/";
+    hashedPassword = "$y$j9T$2OIYhxfmYnmwdY0bMZDZl1$WMoaTny36wEf0vTafsRCpWBZ.mn7iV7Myr/Q02qSFM7";
     extraGroups = ["wheel" "networkmanager" "audio" "input" "video" "docker" "kvm" "libvirtd"];
   };
   security.sudo.wheelNeedsPassword = false; # sudo组是否需要密码
@@ -109,9 +107,16 @@
   };
 
   fonts.packages = with pkgs; [
+    maple-mono.NF-CN
     noto-fonts
     noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     noto-fonts-color-emoji
+
+    bakoma_ttf
+    cm_unicode
+    newcomputermodern
+    paperCorefonts
 
     dejavu_fonts
 
@@ -124,10 +129,19 @@
     enableDefaultPackages = true;
     fontconfig = {
       enable = true;
+      antialias = true;
+      hinting = {
+        enable = true;
+	style = "slight";
+      };
+      subpixel = {
+        rgba = "rgb";
+	lcdfilter = "default";
+      };
       defaultFonts = {
-        serif = ["Noto Sans" "Noto Sans CJK SC"];
-        sansSerif = ["Noto Serif" "Noto Serif CJK SC"];
-        monospace = ["Fira Code"];
+        monospace = ["Maple Mono NF CN"];
+        serif = ["Noto Serif" "Noto Sans CJK SC"];
+        sansSerif = ["Noto Sans" "Noto Serif CJK SC"];
       };
     };
   };

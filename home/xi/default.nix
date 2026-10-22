@@ -73,6 +73,6 @@
     LC_MESSAGES = "en_US.UTF-8"; # 程序输出信息保持英文
   };
 
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
   # home.enableNixpkgsReleaseCheck = false;
 }

@@ -24,9 +24,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # BiliBili 直播弹幕工具
-    bili-danmaku-tui.url = "github:Youthdreamer/bili-danmaku-tui";
-
     catppuccin.url = "github:catppuccin/nix/release-26.05";
 
     home-manager = {
@@ -41,7 +38,6 @@
     nixpkgs-unstable,
     home-manager,
     CookNixvim,
-    bili-danmaku-tui,
     agenix,
     catppuccin,
     noctalia,
@@ -55,7 +51,7 @@
     };
   in {
     nixosConfigurations = {
-      cook = nixpkgs.lib.nixosSystem {
+      aorus = nixpkgs.lib.nixosSystem {
         inherit system;
 
         specialArgs = {
@@ -74,16 +70,15 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {inherit inputs pkgs-unstable;};
-            home-manager.users.youth = {
+            home-manager.users.xi = {
               imports = [
                 catppuccin.homeModules.catppuccin
                 agenix.homeManagerModules.default
                 noctalia.homeModules.default
-                ./home/youth
+                ./home/xi
               ];
               home.packages = [
                 CookNixvim.packages.${system}.default
-                bili-danmaku-tui.packages.${system}.default
               ];
             };
           }
