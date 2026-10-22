@@ -116,7 +116,6 @@
     bakoma_ttf
     cm_unicode
     newcomputermodern
-    paperCorefonts
 
     dejavu_fonts
 
