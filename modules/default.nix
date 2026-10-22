@@ -3,6 +3,6 @@
     ./clash.nix
     ./virtualization.nix
     ./documentation.nix
-    ./systemd.nix
+    # ./systemd.nix
   ];
 }
