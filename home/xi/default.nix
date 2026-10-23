@@ -9,8 +9,8 @@
     ./programs
     ./terminal
     ./niri
-    ./hyprland
-    ./noctalia
+    # ./hyprland
+    # ./noctalia
     ./fcitx5
     ./rofi
     ./wallpaper
