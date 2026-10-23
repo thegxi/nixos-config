@@ -21,7 +21,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -49,10 +49,10 @@ input {
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@120.030"
+    mode "1920x1080@60.000"
     scale 1
     transform "normal"
-    position x=1280 y=0
+    position x=1080 y=0
 }
 
 layout {
