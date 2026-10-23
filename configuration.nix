@@ -75,7 +75,7 @@
   services.udisks2.enable = true;
 
   # networking
-  networking.hostName = "cook";
+  networking.hostName = "aorus";
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [
     5900
@@ -131,11 +131,11 @@
       antialias = true;
       hinting = {
         enable = true;
-	style = "slight";
+        style = "slight";
       };
       subpixel = {
         rgba = "rgb";
-	lcdfilter = "default";
+        lcdfilter = "default";
       };
       defaultFonts = {
         monospace = ["Maple Mono NF CN"];
@@ -201,5 +201,5 @@
     options = lib.mkDefault "--delete-older-than 7d";
   };
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }

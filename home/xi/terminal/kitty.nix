@@ -2,8 +2,8 @@ _: {
   programs.kitty = {
     enable = true;
     font = {
-      name = "FiraCode Nerd Font Mono";
-      size = 14;
+      name = "Maple Mono NF CN";
+      size = 13;
     };
     extraConfig = ''
       # kitty的光标动画（默认不开启）
