@@ -1,6 +1,5 @@
 // "/-" comments out the following node.
 prefer-no-csd //移除终端等应用的标题栏
-spawn-at-startup "noctalia"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "fcitx5"
 spawn-sh-at-startup "sh -c 'wayvnc 0.0.0.0'"
@@ -49,9 +48,9 @@ input {
     }
 }
 
-output "HDMI-A-3" {
+output "HDMI-A-1" {
     mode "1920x1080@120.030"
-    scale 1.1
+    scale 1
     transform "normal"
     position x=1280 y=0
 }
