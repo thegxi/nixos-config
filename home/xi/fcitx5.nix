@@ -1,11 +1,7 @@
 # --- fcitx5 ---
 # Input method user config: custom Koru Fern theme (generated from the
 # global theme), Rime (rime-ice) input method, Maple Mono font.
-{
-  pkgs,
-  theme,
-  ...
-}: let
+{pkgs, ...}: let
   # Panel: dark surface with a subdued fern border. Warning colors remain
   # reserved for actual warnings rather than decorative chrome.
   panel-svg = pkgs.writeText "panel.svg" ''
@@ -27,7 +23,7 @@ in {
     fcitx5.addons = with pkgs; [
       # Rime engine; rime-ice (Wu Song) becomes its shared data dir, so no
       # GitHub fetch or manual dictionary copying is needed at runtime.
-      (fcitx5-rime.override {rimeDataPkgs = [rime-ice rime-wubi];})
+      (fcitx5-rime.override {rimeDataPkgs = [rime-ice];})
       fcitx5-gtk
       qt6Packages.fcitx5-configtool
     ];
