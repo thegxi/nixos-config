@@ -5,8 +5,8 @@ _: {
 
   programs.alacritty.settings = {
     font = {
-      normal.family = "FiraCode Nerd Font";
-      normal.style = "Regular";
+      normal.family = "Maple Mono NF CN";
+      normal.style = "Normal";
       size = 14.0;
     };
   };
