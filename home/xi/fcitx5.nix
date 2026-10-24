@@ -27,7 +27,7 @@ in {
     fcitx5.addons = with pkgs; [
       # Rime engine; rime-ice (Wu Song) becomes its shared data dir, so no
       # GitHub fetch or manual dictionary copying is needed at runtime.
-      (fcitx5-rime.override {rimeDataPkgs = [rime-ice];})
+      (fcitx5-rime.override {rimeDataPkgs = [rime-ice rime-wubi];})
       fcitx5-gtk
       qt6Packages.fcitx5-configtool
     ];
@@ -64,10 +64,16 @@ in {
   xdg.dataFile."fcitx5/rime/default.custom.yaml".text = ''
     patch:
       __include: rime_ice_suggestion:/
+      schema_list:
+        - schema: wubi86
+        - schema: rime_ice
       menu/page_size: 7
       ascii_composer/switch_key/Shift_L: commit_code
       ascii_composer/switch_key/Shift_R: commit_code
   '';
+
+  xdg.dataFile."fcitx5/rime/wubi86.schema.yaml".source = ./rime-wubi/wubi86.schema.yaml;
+  xdg.dataFile."fcitx5/rime/wubi86.dict.yaml".source = ./rime-wubi/wubi86.dict.yaml;
 
   # Framework-level input-method switching (normally Ctrl+Space) commits the
   # raw Latin composition instead of the previewed Chinese candidate.
