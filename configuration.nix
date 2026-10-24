@@ -34,10 +34,12 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     TERMINAL = "kitty";
-    # GTK_IM_MODULE = "fcitx";
+    GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
-    QT5_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
+    SDL_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "fcitx";
+    QT5_IM_MODULE = "fcitx";
   };
 
   # NOTE: 敏感环境变量加载 (ai_api_key等)
