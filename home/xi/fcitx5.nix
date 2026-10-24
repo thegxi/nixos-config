@@ -72,8 +72,8 @@ in {
       ascii_composer/switch_key/Shift_R: commit_code
   '';
 
-  xdg.dataFile."fcitx5/rime/wubi86.schema.yaml".source = ./rime-wubi/wubi86.schema.yaml;
-  xdg.dataFile."fcitx5/rime/wubi86.dict.yaml".source = ./rime-wubi/wubi86.dict.yaml;
+  xdg.dataFile."fcitx5/rime/wubi86.schema.yaml".source = ./rime-data/wubi86.schema.yaml;
+  xdg.dataFile."fcitx5/rime/wubi86.dict.yaml".source = ./rime-data/wubi86.dict.yaml;
 
   # Framework-level input-method switching (normally Ctrl+Space) commits the
   # raw Latin composition instead of the previewed Chinese candidate.
