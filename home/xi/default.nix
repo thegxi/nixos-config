@@ -11,7 +11,7 @@
     ./niri
     # ./hyprland
     # ./noctalia
-    ./fcitx5
+    ./fcitx5.nix
     ./rofi
     ./wallpaper
     ./music
