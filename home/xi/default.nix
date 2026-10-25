@@ -9,7 +9,7 @@
     ./programs
     ./terminal
     ./niri
-    # ./hyprland
+    ./browser
     # ./noctalia
     ./fcitx5.nix
     ./rofi
