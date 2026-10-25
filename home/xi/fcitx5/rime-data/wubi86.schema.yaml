@@ -1,5 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
+
 schema:
   schema_id: wubi86
   name: "五笔86"
@@ -12,16 +13,18 @@ schema:
     敲 z 鍵進入拼音反查
   dependencies:
     - pinyin_simp
+
 switches:
   - name: ascii_mode
-    reset: 1
-    states: [中文, 西文]
+    reset: 0
+    states: [ 中文, 西文 ]
   - name: full_shape
-    states: [半角, 全角]
+    states: [ 半角, 全角 ]
   - name: extended_charset
-    states: [常用, 增廣]
+    states: [ 常用, 增廣 ]
   - name: ascii_punct
-    states: [。，, ．，]
+    states: [ 。，, ．， ]
+
 engine:
   processors:
     - ascii_composer
@@ -42,9 +45,11 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
+
 speller:
   delimiter: " ;'"
   #max_code_length: 4
+
 translator:
   dictionary: wubi86
   enable_charset_filter: true
@@ -54,6 +59,7 @@ translator:
   max_phrase_length: 4
   disable_user_dict_for_patterns:
     - "^z.*$"
+
 reverse_lookup:
   dictionary: pinyin_simp
   prefix: "z"
@@ -63,10 +69,13 @@ reverse_lookup:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+
 punctuator:
   import_preset: symbols
+
 key_binder:
   import_preset: default
+
 recognizer:
   import_preset: default
   patterns:
