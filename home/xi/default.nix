@@ -11,7 +11,7 @@
     ./niri
     ./browser
     # ./noctalia
-    ./fcitx5.nix
+    ./fcitx5
     ./rofi
     ./wallpaper
     ./music
