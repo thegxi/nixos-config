@@ -13,6 +13,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
+    google-chrome
     pulseaudio
     pciutils # lspci
     ffmpeg
@@ -150,12 +151,6 @@
   programs.xwayland.enable = true;
   # Niri
   programs.niri.enable = true;
-  # Hyprland
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
   services.displayManager.gdm.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.xserver.enable = true;
