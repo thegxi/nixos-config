@@ -10,7 +10,6 @@
     ./terminal
     ./niri
     ./browser
-    # ./noctalia
     ./fcitx5
     ./rofi
     ./wallpaper
